@@ -17,8 +17,8 @@ const Strive = () => {
     }
 
     return (
-        <div className="container">
-            <section className={style.strive_section}>
+        <section className={style.strive_section}>
+            <div className="container">
 
                 <div
                     onMouseEnter={() => {
@@ -71,9 +71,9 @@ const Strive = () => {
 
                 </div>
 
-            </section>
 
-        </div>)
+            </div>
+        </section>)
 }
 
 export default Strive

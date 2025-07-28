@@ -22,7 +22,7 @@ export default function ServiceSection() {
     };
 
     return (
-        <div className={styles.innovate_section} >
+        <section className={styles.innovate_section} >
             <div className={styles.service_v2_container} >
 
                 <div
@@ -52,7 +52,7 @@ export default function ServiceSection() {
                 <span> We aim to keep you at updated at all times of the design process. Here is a tentative step-by-step process for our design work. </span>
             </div>
 
-        </div >
+        </section >
     )
 }
 

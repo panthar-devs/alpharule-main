@@ -1,6 +1,8 @@
 .strive_section {
   position: relative;
   margin: 216px auto;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .text {

@@ -16,7 +16,7 @@ const Impact = () => {
         const cursor = setCursor(changeType);
         getCursorContext.setCursorStyle(cursor);
     };
-
+ 
     const scrollParentRef = useRef(null)
 
     const { scrollYProgress } = useScroll({
@@ -51,7 +51,7 @@ const Impact = () => {
                             <div>
                                 <p className={style.para} > Explore some of our recent projects that showcase the quality and diversity of our work. We take pride in helping clients achieve their goals, whether through beautifully designed interfaces, robust applications, or impactful branding. </p>
 
-                                <div className={style.flex_div} >
+                                <div className={style.btn_flex_div} >
                                     <div className={style.btn_div} >
                                         View Portfolio
                                     </div>

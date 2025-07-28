@@ -11,6 +11,7 @@ import {
   hero_technology_image,
   hero_business_image,
   Image_mobile,
+  hero_section
 } from "./index.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -126,153 +127,155 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className={hero_container}>
-        <div className={hero_left}>
-          <div className={hero_title_container}>
-            <span
-              className={hero_title}
-              onMouseOver={() => {
-                setHoverImage(hero_categories.design);
-                setIsAutoSlide(false);
-                changeCursor("size_defference");
-              }}
-              onMouseLeave={() => {
-                setIsAutoSlide(true);
-                changeCursor();
-              }}
-              style={{ color: hoverImage == hero_categories.design ? "var(--dark)" : "#fff" }}
-            >
-              Design
-            </span>
-            <span
-              className={hero_title}
-              onMouseOver={() => {
-                setHoverImage(hero_categories.tech);
-                setIsAutoSlide(false);
-                changeCursor("size_defference");
-              }}
-              onMouseLeave={() => {
-                setIsAutoSlide(true);
-                changeCursor();
-              }}
-              style={{ color: hoverImage == hero_categories.tech ? "var(--dark)" : "#fff" }}
-            >
-              Technology
-            </span>
-            <span
-              className={hero_title}
-              onMouseOver={() => {
-                setHoverImage(hero_categories.business);
-                setIsAutoSlide(false);
-                changeCursor("size_defference");
-              }}
-              onMouseLeave={() => {
-                setIsAutoSlide(true);
-                changeCursor();
-              }}
-              style={{ color: hoverImage == hero_categories.business ? "var(--dark)" : "#fff" }}
-            >
-              Business
-            </span>
-          </div>
-          <p className={hero_body}>
-            Transform Your Business with Our Expert Design, Development, and Marketing Services.
-          </p>
-          <Link href={Routingvariables.contact}>
-            <div
-              id="magnet"
-              className={hero_btn}
-              style={{ left: buttonPosition.x, top: buttonPosition.y }}
-            >
-              <span>Get Started</span>
+    <section className={hero_section} >
+      <div className="container">
+        <div className={hero_container}>
+          <div className={hero_left}>
+            <div className={hero_title_container}>
+              <span
+                className={hero_title}
+                onMouseOver={() => {
+                  setHoverImage(hero_categories.design);
+                  setIsAutoSlide(false);
+                  changeCursor("size_defference");
+                }}
+                onMouseLeave={() => {
+                  setIsAutoSlide(true);
+                  changeCursor();
+                }}
+                style={{ color: hoverImage == hero_categories.design ? "var(--dark)" : "#fff" }}
+              >
+                Design
+              </span>
+              <span
+                className={hero_title}
+                onMouseOver={() => {
+                  setHoverImage(hero_categories.tech);
+                  setIsAutoSlide(false);
+                  changeCursor("size_defference");
+                }}
+                onMouseLeave={() => {
+                  setIsAutoSlide(true);
+                  changeCursor();
+                }}
+                style={{ color: hoverImage == hero_categories.tech ? "var(--dark)" : "#fff" }}
+              >
+                Technology
+              </span>
+              <span
+                className={hero_title}
+                onMouseOver={() => {
+                  setHoverImage(hero_categories.business);
+                  setIsAutoSlide(false);
+                  changeCursor("size_defference");
+                }}
+                onMouseLeave={() => {
+                  setIsAutoSlide(true);
+                  changeCursor();
+                }}
+                style={{ color: hoverImage == hero_categories.business ? "var(--dark)" : "#fff" }}
+              >
+                Business
+              </span>
             </div>
-          </Link>
-        </div>
-        <div className={hero_right}>
-          {hoverImage == hero_categories.design ? (
-            <>
-              {isMobile ? (
-                <div className={Image_mobile}>
-                  <Image data-aos="zoom-in" src={fulldesignImage}></Image>
-                </div>
-              ) : (
-                <>
-                  <div className={hero_design_image}>
-                    <Image data-aos="fade-up" src={pinkBoxDesign} alt=""></Image>
-                    <Image data-aos="fade-down-right" src={blueBoxDesign} alt=""></Image>
-                    <Image data-aos="fade-down-left" src={designText} alt=""></Image>
-                    <Image data-aos="fade-up" src={designImage} alt=""></Image>
+            <p className={hero_body}>
+              Transform Your Business with Our Expert Design, Development, and Marketing Services.
+            </p>
+            <Link href={Routingvariables.contact}>
+              <div
+                id="magnet"
+                className={hero_btn}
+                style={{ left: buttonPosition.x, top: buttonPosition.y }}
+              >
+                <span>Get Started</span>
+              </div>
+            </Link>
+          </div>
+          <div className={hero_right}>
+            {hoverImage == hero_categories.design ? (
+              <>
+                {isMobile ? (
+                  <div className={Image_mobile}>
+                    <Image data-aos="zoom-in" src={fulldesignImage}></Image>
                   </div>
-                  <Image
-                    data-aos="fade"
-                    alt=""
-                    src={hero_design}
-                    style={{ maxWidth: "648px", height: "auto" }}
-                  />
-                </>
-              )}
-            </>
-          ) : (
-            ""
-          )}
+                ) : (
+                  <>
+                    <div className={hero_design_image}>
+                      <Image data-aos="fade-up" src={pinkBoxDesign} alt=""></Image>
+                      <Image data-aos="fade-down-right" src={blueBoxDesign} alt=""></Image>
+                      <Image data-aos="fade-down-left" src={designText} alt=""></Image>
+                      <Image data-aos="fade-up" src={designImage} alt=""></Image>
+                    </div>
+                    <Image
+                      data-aos="fade"
+                      alt=""
+                      src={hero_design}
+                      style={{ maxWidth: "648px", height: "auto" }}
+                    />
+                  </>
+                )}
+              </>
+            ) : (
+              ""
+            )}
 
-          {hoverImage == hero_categories.tech ? (
-            <>
-              {isMobile ? (
-                <div className={Image_mobile}>
-                  {" "}
-                  <Image data-aos="zoom-in" src={fulltechImage}></Image>
-                </div>
-              ) : (
-                <>
-                  <div className={hero_technology_image}>
-                    <Image data-aos="fade-down-left" src={pinkBoxTech} alt=""></Image>
-                    <Image data-aos="fade-up-left" src={blueBoxTech} alt=""></Image>
-                    <Image data-aos="fade-up-right" src={techText} alt=""></Image>
+            {hoverImage == hero_categories.tech ? (
+              <>
+                {isMobile ? (
+                  <div className={Image_mobile}>
+                    {" "}
+                    <Image data-aos="zoom-in" src={fulltechImage}></Image>
                   </div>
-                  <Image
-                    data-aos="fade"
-                    alt=""
-                    src={hero_tech}
-                    style={{ maxWidth: "648px", height: "auto" }}
-                  />
-                </>
-              )}
-            </>
-          ) : (
-            ""
-          )}
+                ) : (
+                  <>
+                    <div className={hero_technology_image}>
+                      <Image data-aos="fade-down-left" src={pinkBoxTech} alt=""></Image>
+                      <Image data-aos="fade-up-left" src={blueBoxTech} alt=""></Image>
+                      <Image data-aos="fade-up-right" src={techText} alt=""></Image>
+                    </div>
+                    <Image
+                      data-aos="fade"
+                      alt=""
+                      src={hero_tech}
+                      style={{ maxWidth: "648px", height: "auto" }}
+                    />
+                  </>
+                )}
+              </>
+            ) : (
+              ""
+            )}
 
-          {hoverImage == hero_categories.business ? (
-            <>
-              {isMobile ? (
-                <div className={Image_mobile}>
-                  <Image data-aos="zoom-in" src={fullbusinessImage}></Image>
-                </div>
-              ) : (
-                <>
-                  {" "}
-                  <div className={hero_business_image}>
-                    <Image data-aos="fade-up-right" src={pinkBoxBusiness} alt=""></Image>
-                    <Image data-aos="fade-left" src={blueBoxBusiness} alt=""></Image>
-                    <Image data-aos="fade-down" src={businessImage} alt=""></Image>
+            {hoverImage == hero_categories.business ? (
+              <>
+                {isMobile ? (
+                  <div className={Image_mobile}>
+                    <Image data-aos="zoom-in" src={fullbusinessImage}></Image>
                   </div>
-                  <Image
-                    data-aos="fade"
-                    alt=""
-                    src={hero_business}
-                    style={{ maxWidth: "648px", height: "auto" }}
-                  />
-                </>
-              )}
-            </>
-          ) : (
-            ""
-          )}
+                ) : (
+                  <>
+                    {" "}
+                    <div className={hero_business_image}>
+                      <Image data-aos="fade-up-right" src={pinkBoxBusiness} alt=""></Image>
+                      <Image data-aos="fade-left" src={blueBoxBusiness} alt=""></Image>
+                      <Image data-aos="fade-down" src={businessImage} alt=""></Image>
+                    </div>
+                    <Image
+                      data-aos="fade"
+                      alt=""
+                      src={hero_business}
+                      style={{ maxWidth: "648px", height: "auto" }}
+                    />
+                  </>
+                )}
+              </>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

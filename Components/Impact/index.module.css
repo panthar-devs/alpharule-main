@@ -14,6 +14,14 @@
     gap: 2rem;
 }
 
+.btn_flex_div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
 .para {
     font-size: 1.28rem;
     color: black;
@@ -42,7 +50,6 @@
 
 .flex_1 {
     flex: 1;
-    padding: 2rem;
 }
 
 
@@ -129,4 +136,19 @@
         flex-direction: column;
     }
 
+    .impact_section {
+        height: auto;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .text_black_container,
+    .text_container {
+        margin-left: 0;
+        font-size: 32px;
+    }
 }

@@ -20,8 +20,8 @@ const OurTeam = () => {
   const words = paragraph.split(" ")
 
   return (
-    <div className="container" ref={containerRef} >
-      <div className={team_container}>
+    <section ref={containerRef} className={team_container}>
+      <div className="container"  >
         <motion.div className={team_img} style={{ rotate }} >
           <Image src={BigGrayStar} alt="image_star" />
         </motion.div>
@@ -35,7 +35,7 @@ const OurTeam = () => {
           }
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

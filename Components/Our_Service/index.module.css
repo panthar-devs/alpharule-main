@@ -2,6 +2,8 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   border-radius: 51px;
   min-height: 100vh;
   background: black;
