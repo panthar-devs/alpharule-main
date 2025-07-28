@@ -1,0 +1,177 @@
+.mainDiv {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.bg_section {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.footer_orange {
+    position: absolute;
+    background-color: #E35629;
+    inset: 0;
+    z-index: 2;
+}
+
+.last_div {
+    z-index: 5;
+    background-color: #282828;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.last_div div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.flex_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 5;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.green_span {
+    color: var(--green);
+    font-size: 24px;
+}
+
+.idea_div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.idea_div span {
+    font-size: 96px;
+    font-weight: 400;
+}
+
+.contact_text {
+    text-align: center;
+    color: var(--gray-dark);
+}
+
+.service_text {
+    width: 50%;
+    font-size: 22px;
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+.service_title_container span {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--dark);
+    -webkit-text-stroke: 1px #fff;
+}
+
+.service_title_container span:hover {
+    color: #d9d9d9;
+    transition-duration: 0.5s;
+}
+
+.service_category_title {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* Magnetic Button */
+
+
+.hero_btn {
+    border-radius: 100vw;
+    color: var(--dark);
+    font-size: 52px;
+    background-color: black;
+    border: 1px solid var(--gray-light);
+    color: var(--gray-light);
+    padding: 2rem 5rem;
+    transition: all ease-in-out 0.3s;
+    margin: 20px 0;
+    transition: 0.15s linear;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    line-height: 100%;
+}
+
+.btn_icon {
+    height: 5rem;
+    width: 5rem;
+}
+
+.hero_btn::before {
+    content: "";
+    position: absolute;
+    top: var(--xx);
+    left: var(--yy);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--white-light);
+    transition: width 0.8s, height 0.7s;
+    z-index: -1;
+}
+
+.hero_btn:hover::before {
+    width: 80rem;
+    height: 80rem;
+}
+
+.hero_btn:hover {
+    color: black;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 950px) {
+    .hero_btn {
+        font-size: 38px;
+        padding: 1.5rem 3.5rem;
+    }
+
+    .idea_div span {
+        font-size: 86px;
+    }
+}
