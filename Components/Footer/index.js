@@ -17,53 +17,55 @@ export default function SocialLinks() {
     { name: "Twitter", href: "#" },
   ]
   return (
-    <div className={styles.footer}>
+    <footer>
+      <div className={styles.footer}>
 
-      <div>
-        <motion.div
-          className={styles.follow_div}
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            x: {
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "loop",
-              duration: 90,
-              ease: "linear",
-            },
-          }}
-        >
-          {Array.from({ length: 15 }).map((_, i) => (
-            <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
-              <span className={styles.followSpam}>
-                Follow Us
-                <AtSign className={styles.followSymbol} />
-              </span>
-              <span className={styles.circle} />
-            </div>
+        <div>
+          <motion.div
+            className={styles.follow_div}
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              x: {
+                repeat: Number.POSITIVE_INFINITY,
+                repeatType: "loop",
+                duration: 90,
+                ease: "linear",
+              },
+            }}
+          >
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
+                <span className={styles.followSpam}>
+                  Follow Us
+                  <AtSign className={styles.followSymbol} />
+                </span>
+                <span className={styles.circle} />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        <div className={styles.footer_small_div}>
+          {socialLinks.map((link) => (
+            <Card key={link.name} link={link} />
           ))}
-        </motion.div>
-      </div>
-
-      <div className={styles.footer_small_div}>
-        {socialLinks.map((link) => (
-          <Card key={link.name} link={link} />
-        ))}
-      </div>
-
-      <div className={styles.last_div} >
-        <div className={styles.innerspan} >
-          <span style={{ color: "var(--gray-dark)" }} >Main Office</span>
-          <h3> New Delhi, India </h3>
         </div>
 
-        <div className={styles.mail_div} >
-          info@thealpharule.com
+        <div className={styles.last_div} >
+          <div className={styles.innerspan} >
+            <span style={{ color: "var(--gray-dark)" }} >Main Office</span>
+            <h3> New Delhi, India </h3>
+          </div>
+
+          <div className={styles.mail_div} >
+            info@thealpharule.com
+          </div>
         </div>
-      </div>
 
 
-      <Connect />
-    </div >
+        <Connect />
+      </div >
+    </footer>
   )
 }
 

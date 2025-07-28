@@ -65,7 +65,7 @@ const Strive = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={style.flex_1} >
+                    <div className={style.img_flex_1} >
                         <Image src={graph} alt="graph" />
                     </div>
 

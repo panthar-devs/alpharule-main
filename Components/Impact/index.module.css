@@ -121,3 +121,12 @@
     left: 0;
     right: 0;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .flex_div {
+        flex-direction: column;
+    }
+
+}
