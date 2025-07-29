@@ -1,5 +1,3 @@
-/* index.module.css */
-
 .footer {
   position: relative;
   width: 100%;
@@ -10,14 +8,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 5% 5% 0 0;
+  border-radius: 28px 28px 0 0;
 }
 
 .footer_small_div {
   width: 100%;
 }
 
-/* Wrapper for each social link item to handle hover state and general area styling */
 .footer_link_wrapper {
   border-bottom: 1px solid var(--gray-dark);
   overflow: hidden;
@@ -28,7 +25,6 @@
   height: 112px;
 }
 
-/* Styles for the static (non-hovered) link */
 .footer_link_static {
   display: flex;
   align-items: center;
@@ -37,7 +33,6 @@
   font-weight: 500;
   width: 100%;
   height: 100%;
-  /* Make it fill the wrapper */
   text-decoration: none;
   color: inherit;
   padding: 0 5rem;
@@ -88,12 +83,13 @@
 }
 
 .last_div {
-  padding: 5rem;
+  padding: 4rem;
   display: flex;
   gap: 2rem;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -187,4 +183,25 @@
   .copyright_band {
     margin-top: 30px;
   }
+}
+
+@media (max-width: 768px) {
+  .followSpam {
+    font-size: 5rem;
+  }
+
+  .follow_div {
+    padding: 2.5rem;
+  }
+
+  .footer_link_static {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .followSpam {
+    font-size: 4.25rem;
+  }
+  
 }

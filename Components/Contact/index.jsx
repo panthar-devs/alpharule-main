@@ -61,9 +61,14 @@ const Our_Service = () => {
       <AnimatePresence mode="wait" >
         {visible &&
           <motion.div
-            initial={{ clipPath: "inset(90%)", opacity: 0, borderRadius: "100%" }}
-            animate={{ clipPath: "inset(0%)", opacity: 0.6, borderRadius: "0%" }}
-            exit={{ clipPath: "inset(100%)", opacity: 0, borderRadius: "100%" , transition:{duration : 1.5} }}
+            initial={{ scale: 0, opacity: 0, borderRadius: "50%" }}
+            animate={{ scale: 1, opacity: 0.6, borderRadius: "0%" }}
+            exit={{
+              scale: 0,
+              opacity: 0,
+              borderRadius: "50%",
+              transition: { duration: 0.5 },
+            }}
             transition={{ duration: 0.5, ease: [[.17, .67, .83, .67]] }}
             className={style.footer_orange} />
         }
@@ -73,7 +78,7 @@ const Our_Service = () => {
       </div>
 
       <div className={style.flex_div}>
-        <div className={style.flex_div}>
+        <div className={style.div_flex_div}>
           <span className={style.green_span}>Ready to Elevate Your Brand</span>
 
           <div className={style.idea_div}>

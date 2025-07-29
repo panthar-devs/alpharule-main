@@ -232,7 +232,7 @@ a:hover {
 
   .embla__slide,
   .embla__slide_cover {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .embla__button {
@@ -240,7 +240,7 @@ a:hover {
     height: 2.25rem;
   }
 
-  .embla__container{
-    /* margin-left: 0; */
+  .embla__container {
+    margin-left: 0rem;
   }
 }
