@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Phone from "../../assets/image/Difference/phone.svg";
 import Mesh from "../../assets/image/Difference/bg.svg";
-import { bg_section, smart_div, image, innovate_section, word_div, word_content, wrapper, tempDiv, secondDiv, phoneContainer, phoneImg } from "./index.module.css";
+import { bg_section, smart_div, image, innovate_section, word_div, word_content, wrapper, tempDiv, secondDiv, phoneContainer, wrapper_firstDiv } from "./index.module.css";
 import LoopSlider from ".";
 
 
@@ -15,7 +15,7 @@ const Difference = () => {
 
 
             <div className={word_div} >
-                <div className={wrapper} >
+                <div className={wrapper_firstDiv} >
                     <WordSeparate word="EXPERIENCE" />
                     <WordSeparate word="THE" />
                 </div>
