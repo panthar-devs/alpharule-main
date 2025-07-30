@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  border-radius: 51px;
+  border-radius: 28px/28px;
   min-height: 100vh;
   background: black;
   text-align: right;
@@ -17,6 +17,7 @@
   transform: rotate(-30deg);
   right: 0;
   z-index: 0;
+  animation: round 5s linear infinite;
 }
 
 .service_v2_last_container {
@@ -24,6 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
 }
 
 .service_v2_last_container span {
@@ -191,6 +193,16 @@
   .gridItem {
     font-size: 0.9rem;
   }
+
+  .service_title_container_span {
+    font-size: 58px;
+    line-height: 1.5;
+  }
+
+  .green_div {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .footer_content {
@@ -351,5 +363,11 @@
   .service_category_title h3 {
     font-size: 25px;
     letter-spacing: 0.2em;
+  }
+
+  .circle_container {
+    width: 65px;
+    height: 65px;
+    animation: round 5s linear infinite;
   }
 }

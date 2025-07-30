@@ -20,6 +20,7 @@
 .small_flex_div {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .flex_1 {
@@ -38,6 +39,7 @@
 .small_div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 1.75rem;
   padding: 1.5rem;
   margin: 2rem 0;
@@ -49,6 +51,7 @@
   font-weight: 600;
   display: flex;
   align-items: flex-end;
+  margin: 0;
 }
 
 .div_para {
@@ -58,6 +61,7 @@
   font-size: 1.5rem;
   color: var(--gray-semi-dark);
   font-weight: 500;
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -72,8 +76,30 @@
     flex-direction: column;
   }
 
+  .flex_1 {
+    padding: 0;
+  }
+
   .cont_div {
     padding: 0;
+  }
+
+  .div_heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .div_heading {
+    font-size: 2.75rem;
+  }
+
+  .div_para {
+    font-size: 0.75rem;
   }
 }
 
@@ -190,12 +216,12 @@
 
   .innovatepart {
     position: absolute;
-    top: 10px;
-    left: 7px;
+    top: 0;
+    left: 0;
   }
 
   .text_container {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 0px;
     -webkit-text-stroke: 1px var(--dark);
   }
