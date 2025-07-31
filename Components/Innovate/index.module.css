@@ -295,3 +295,9 @@
     margin-bottom: 40px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .v2_text_container {
+    font-size: 70px;
+  }
+}

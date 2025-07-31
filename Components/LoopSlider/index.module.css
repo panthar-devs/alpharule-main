@@ -8,6 +8,9 @@
   background: black;
   text-align: right;
   padding: 10rem 0 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 5rem 0;
 }
 
 .bg_section {
@@ -118,12 +121,16 @@
 @media only screen and (max-width: 480px) {
 
   .word_content {
-    font-size: 1.2rem;
-    padding: 0 12px 18px;
+    font-size: 1rem;
+    padding: 0 10px 16px;
   }
 
   .smart_div {
     font-size: 2.75rem;
+  }
+
+  .phoneContainer {
+    right: 6rem;
   }
 }
 
