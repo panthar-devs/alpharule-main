@@ -45,7 +45,7 @@ export default function ServiceSection() {
             </div>
 
             {mainTexts.map((item, i) => (
-                <Card item={item} />
+                <Card item={item} index={i} />
             ))}
 
             <div className={styles.service_v2_last_container} >
@@ -57,7 +57,7 @@ export default function ServiceSection() {
 }
 
 
-const Card = ({ item }) => {
+const Card = ({ item, index }) => {
     const [isHovered, setIsHovered] = useState(false)
     return (
         <div
@@ -65,7 +65,7 @@ const Card = ({ item }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)} >
 
-            <div className={styles.scrollingBanner} >
+            <div className={isHovered ? styles.hover_scrollingBanner : styles.scrollingBanner} >
                 <motion.div
                     className={styles.scrollingTextInner}
                     animate={{ x: "-50%" }}
@@ -73,7 +73,7 @@ const Card = ({ item }) => {
                         x: {
                             repeat: Number.POSITIVE_INFINITY,
                             repeatType: "loop",
-                            duration: 10,
+                            duration: isHovered ? 120 : 10,
                             ease: "linear",
                         },
                     }}
@@ -82,11 +82,25 @@ const Card = ({ item }) => {
                         <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
                             <span className={styles.followSpam}>
                                 {item.text_first}
-                                <Asterisk className={styles.followSymbol} />
+                                <Asterisk className={
+                                    isHovered ? (
+                                        index === 0 ? styles.first_followSymbol :
+                                            index === 1 ? styles.second_followSymbol :
+                                                index === 2 ? styles.third_followSymbol :
+                                                    styles.first_followSymbol
+                                    ) : styles.followSymbol
+                                } />
                             </span>
                             <span className={styles.followSpam}>
                                 {item.text_sec}
-                                <Asterisk className={styles.followSymbol} />
+                                <Asterisk className={
+                                    isHovered ? (
+                                        index === 0 ? styles.first_followSymbol :
+                                            index === 1 ? styles.second_followSymbol :
+                                                index === 2 ? styles.third_followSymbol :
+                                                    styles.first_followSymbol
+                                    ) : styles.followSymbol
+                                } />
                             </span>
                         </div>
                     ))}

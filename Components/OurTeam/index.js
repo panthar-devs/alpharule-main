@@ -12,7 +12,7 @@ const OurTeam = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.9", "end end"]
+    offset: ["0.5 1", "end center"]
   })
 
   const rotate = useTransform(scrollYProgress, [0, 1], ["5deg", "90deg"])

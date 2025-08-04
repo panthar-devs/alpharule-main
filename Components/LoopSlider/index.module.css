@@ -39,6 +39,7 @@
   display: flex;
   flex-wrap: nowrap;
   margin-left: 2rem;
+  position: relative;
 }
 
 .smart_div {

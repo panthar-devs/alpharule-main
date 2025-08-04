@@ -1,40 +1,39 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
-import {
-  hero_container,
-  hero_left,
-  hero_right,
-  hero_title_container,
-  hero_title,
-  hero_body,
-  hero_btn,
-  hero_design_image,
-  hero_technology_image,
-  hero_business_image,
-  Image_mobile,
-  hero_section
-} from "./index.module.css";
+import { setCursor } from "@/common-functions";
+import { CursorContext } from "@/context/CursorContext";
+import { Routingvariables } from "@/utilites/RoutingVariavles/routingVariables";
 import Image from "next/image";
 import Link from "next/link";
-import { Routingvariables } from "@/utilites/RoutingVariavles/routingVariables";
-import { CursorContext } from "@/context/CursorContext";
-import { setCursor } from "@/common-functions";
-import hero_design from "../../assets/image/landingPage/hero_images/design1.png";
-import hero_tech from "../../assets/image/landingPage/hero_images/tech1.png";
-import hero_business from "../../assets/image/landingPage/hero_images/business1.png";
-import pinkBoxBusiness from "../../assets/image/landingPage/hero_images/pinkBoxBuisness.svg";
-import pinkBoxTech from "../../assets/image/landingPage/hero_images/pinkBoxTech.svg";
-import pinkBoxDesign from "../../assets/image/landingPage/hero_images/pinkBoxDesign.svg";
+import { useContext, useEffect, useRef, useState } from "react";
+import techText from "../../assets/image//landingPage/hero_images/technology_text.svg";
+import fullbusinessImage from "../../assets/image/landingPage/hero-business.png";
+import fulldesignImage from "../../assets/image/landingPage/hero-design.png";
+import fulltechImage from "../../assets/image/landingPage/hero-tech.png";
 import blueBoxBusiness from "../../assets/image/landingPage/hero_images/blueBoxBusiness.svg";
 import blueBoxDesign from "../../assets/image/landingPage/hero_images/blueBoxDesign.svg";
 import blueBoxTech from "../../assets/image/landingPage/hero_images/blueBoxTech.svg";
+import hero_business from "../../assets/image/landingPage/hero_images/business1.png";
+import businessImage from "../../assets/image/landingPage/hero_images/business_img.png";
+import hero_design from "../../assets/image/landingPage/hero_images/design1.png";
 import designImage from "../../assets/image/landingPage/hero_images/design_img.png";
 import designText from "../../assets/image/landingPage/hero_images/design_text.svg";
-import techImage from "../../assets/image//landingPage/hero_images/technology_img.png";
-import techText from "../../assets/image//landingPage/hero_images/technology_text.svg";
-import businessImage from "../../assets/image/landingPage/hero_images/business_img.png";
-import fulldesignImage from "../../assets/image/landingPage/hero-design.png";
-import fulltechImage from "../../assets/image/landingPage/hero-tech.png";
-import fullbusinessImage from "../../assets/image/landingPage/hero-business.png";
+import pinkBoxBusiness from "../../assets/image/landingPage/hero_images/pinkBoxBuisness.svg";
+import pinkBoxDesign from "../../assets/image/landingPage/hero_images/pinkBoxDesign.svg";
+import pinkBoxTech from "../../assets/image/landingPage/hero_images/pinkBoxTech.svg";
+import hero_tech from "../../assets/image/landingPage/hero_images/tech1.png";
+import {
+  hero_body,
+  hero_btn,
+  hero_business_image,
+  hero_container,
+  hero_design_image,
+  hero_left,
+  hero_right,
+  hero_section,
+  hero_technology_image,
+  hero_title,
+  hero_title_container,
+  Image_mobile
+} from "./index.module.css";
 
 const Hero = () => {
   const INITIAL_TIMER = 0;

@@ -61,12 +61,10 @@ const Our_Service = () => {
       <AnimatePresence mode="wait" >
         {visible &&
           <motion.div
-            initial={{ scale: 0, opacity: 0, borderRadius: "50%" }}
-            animate={{ scale: 1, opacity: 0.6, borderRadius: "0%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.9 }}
             exit={{
-              scale: 0,
               opacity: 0,
-              borderRadius: "50%",
               transition: { duration: 0.5 },
             }}
             transition={{ duration: 0.5, ease: [[.17, .67, .83, .67]] }}

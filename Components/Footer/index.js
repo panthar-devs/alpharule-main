@@ -33,7 +33,16 @@ export default function SocialLinks() {
               },
             }}
           >
-            {Array.from({ length: 15 }).map((_, i) => (
+            {Array.from({ length: 25 }).map((_, i) => (
+              <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
+                <span className={styles.followSpam}>
+                  Follow Us
+                  <AtSign className={styles.followSymbol} />
+                </span>
+                <span className={styles.circle} />
+              </div>
+            ))}
+            {Array.from({ length: 25 }).map((_, i) => (
               <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
                 <span className={styles.followSpam}>
                   Follow Us
@@ -73,7 +82,6 @@ const Card = ({ link }) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    // This div acts as the persistent container for hover events
     <div
       className={styles.footer_link_wrapper}
       onMouseEnter={() => setIsHovered(true)}
@@ -83,17 +91,19 @@ const Card = ({ link }) => {
         {isHovered ? (
           <motion.div
             key="scrolling-container"
-            initial={{ opacity: 0, scaleX: 0.8 }} // Start slightly scaled down from center
-            animate={{ opacity: 1, scaleX: 1 }} // Expand to full width
-            exit={{ opacity: 0, scaleX: 0.8 }} // Collapse back
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }} // Expand to full height
+            exit={{ opacity: 0, scaleY: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            style={{ originX: 0.5 }}
+            style={{ originY: 0.5 }}
             className={styles.footer_animationDiv}
           >
             {/* Inner div for continuous scroll */}
             <motion.div
               className={styles.footer_inner}
-              animate={{ x: ["0%", "-50%"] }}
+              initial={{ scale: 0.8 }}
+              animate={{ x: ["0%", "-50%"], scale: 1 }}
+              exit={{ scale: 0.8 }}
               transition={{
                 x: {
                   repeat: Number.POSITIVE_INFINITY,
@@ -109,7 +119,6 @@ const Card = ({ link }) => {
                     {link.name}
                     <ArrowUpRight className="w-5 h-5" />
                   </span>
-                  <span className={styles.circle} />
                 </Link>
               ))}
             </motion.div>
@@ -119,12 +128,12 @@ const Card = ({ link }) => {
           <motion.a
             key="single-link"
             href={link.href}
-            initial={{ opacity: 0, scaleX: 0.8 }} // Start slightly scaled down from center
-            animate={{ opacity: 1, scaleX: 1 }} // Expand to full width
-            exit={{ opacity: 0, scaleX: 0.8 }} // Collapse back
+            initial={{ opacity: 1, scaleY: 1 }} // Start fully visible and scaled the outer div
+            animate={{ opacity: 1, scaleY: 1 }} 
+            exit={{ opacity: 0, scaleY: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            style={{ originX: 0.5 }} // Ensure scaling happens from the center
-            className={styles.footer_link_static} // Apply specific styles for the static link
+            style={{ originY: 0.5 }}
+            className={styles.footer_link_static}
           >
             {link.name}
             <ArrowUpRight className={styles.footer_icon} />

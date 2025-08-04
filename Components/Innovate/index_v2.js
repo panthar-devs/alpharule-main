@@ -22,7 +22,7 @@ const Strive = () => {
 
                 <div
                     onMouseEnter={() => {
-                        changeCursor("color_change");
+                        changeCursor("size_defference");
                     }}
                     onMouseLeave={() => {
                         changeCursor();
