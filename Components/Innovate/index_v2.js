@@ -29,10 +29,10 @@ const Strive = () => {
                     }}
                 >
                     <div className={style.innovateupper}>
-                        <span className={style.v2_text_container}>We ,</span>{" "}
-                        <span className={style.v2_text_container}>Strive</span>{" "}
-                        <span className={style.v2_text_container}>to</span>{" "}
-                        <span className={style.v2_text_container}>Innovate</span>
+                        <span className={style.v2_text}>We</span>{" "}
+                        <span className={style.v2_text}>Strive</span>{" "}
+                        <span className={style.v2_text}>to</span>{" "}
+                        <span className={style.v2_text_transparent}>Innovate</span>
                     </div>
                 </div>
 

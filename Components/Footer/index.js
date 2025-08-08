@@ -94,7 +94,7 @@ const Card = ({ link }) => {
             initial={{ opacity: 0, scaleY: 0 }}
             animate={{ opacity: 1, scaleY: 1 }} // Expand to full height
             exit={{ opacity: 0, scaleY: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             style={{ originY: 0.5 }}
             className={styles.footer_animationDiv}
           >
@@ -131,7 +131,7 @@ const Card = ({ link }) => {
             initial={{ opacity: 1, scaleY: 1 }} // Start fully visible and scaled the outer div
             animate={{ opacity: 1, scaleY: 1 }} 
             exit={{ opacity: 0, scaleY: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             style={{ originY: 0.5 }}
             className={styles.footer_link_static}
           >

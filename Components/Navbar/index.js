@@ -157,23 +157,17 @@ const Navbar = () => {
                       <li onMouseEnter={() => servicesMenuOpen()} onClick={() => setIsOpen(!open)}>
                         <span className={nav_link}>
                           Our Services
-                          {isOpen ? (
-                            <Image
-                              style={{ position: "absolute", top: "2px" }}
-                              src={nav_down_arrow}
-                              height={20}
-                            />
-                          ) : (
-                            <Image
-                              style={{
-                                marginLeft: "5px",
-                                position: "absolute",
-                                top: "8px",
-                              }}
-                              src={nav_dot}
-                              height={7}
-                            />
-                          )}
+
+                          <Image
+                            style={{
+                              marginLeft: "5px",
+                              position: "absolute",
+                              top: isOpen ? "2px" : "10px",
+                              right: isOpen ? "-22px" : "-12px"
+                            }}
+                            src={isOpen ? nav_down_arrow : nav_dot}
+                            height={isOpen ? 20 : 7}
+                          />
                         </span>
                       </li>
                     </Fragment>

@@ -136,7 +136,16 @@
   left: 20px;
 }
 
-.v2_text_container {
+.v2_text {
+  font-size: 82px;
+  line-height: 98px;
+  font-weight: 400px;
+  color: black;
+  margin-right: 15px;
+  line-height: 1em;
+}
+
+.v2_text_transparent {
   font-size: 82px;
   line-height: 98px;
   font-weight: 400px;

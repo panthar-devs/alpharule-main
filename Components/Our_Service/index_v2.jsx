@@ -3,12 +3,16 @@
 import { setCursor } from "@/common-functions"
 import { CursorContext } from "@/context/CursorContext"
 import { mainTexts } from "@/utilites/data"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion"
 import { Asterisk } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useContext, useState } from "react"
-import GreenStar from "../../assets/image/landingPage/big_green_star.svg"
+import { useContext, useRef, useState } from "react"
+import BigGreenStar from "../../assets/image/landingPage/big_green_star.svg"
+import BlueStar from "../../assets/image/Service/blue_star.svg"
+import GreenStar from "../../assets/image/Service/green_star.svg"
+import RedStar from "../../assets/image/Service/red_star.svg"
+import Star from "../../assets/image/Service/star.svg"
 import styles from "./index.module.css"
 
 export default function ServiceSection() {
@@ -20,6 +24,10 @@ export default function ServiceSection() {
         const cursor = setCursor(changeType);
         getCursorContext.setCursorStyle(cursor);
     };
+    const [openIndex, setOpenIndex] = useState(null)
+    const handleToggle = (index) => {
+        setOpenIndex(prevIndex => (prevIndex === index ? null : index))
+    }
 
     return (
         <section className={styles.innovate_section} >
@@ -40,12 +48,12 @@ export default function ServiceSection() {
                 </div>
 
                 <div className={styles.green_div} >
-                    <Image src={GreenStar} />
+                    <Image src={BigGreenStar} />
                 </div>
             </div>
 
             {mainTexts.map((item, i) => (
-                <Card item={item} index={i} />
+                <Card item={item} index={i} isOpen={openIndex === i} onToggle={handleToggle} />
             ))}
 
             <div className={styles.service_v2_last_container} >
@@ -57,13 +65,41 @@ export default function ServiceSection() {
 }
 
 
-const Card = ({ item, index }) => {
+const Card = ({ item, index, isOpen, onToggle }) => {
     const [isHovered, setIsHovered] = useState(false)
+    const containerRef = useRef(null)
+    const mouse = {
+        x: useMotionValue(0),
+        y: useMotionValue(0)
+    }
+
+    const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 }
+
+    const smoothMouse = {
+        x: useSpring(mouse.x, smoothOptions),
+        y: useSpring(mouse.y, smoothOptions)
+    }
+
+    const handleClick = () => {
+        onToggle(index)
+    }
+
+    const manageMouseMove = e => {
+        const { clientX, clientY } = e;
+        mouse.x.set(clientX)
+        mouse.y.set(clientY - 150);
+    }
+
+
     return (
         <div
+            ref={containerRef}
             className={styles.serviceSectionContainer}
+            onMouseOver={() => setIsHovered(true)}
             onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)} >
+            onMouseLeave={() => setIsHovered(false)}
+            onMouseMove={manageMouseMove}
+            onClick={handleClick}>
 
             <div className={isHovered ? styles.hover_scrollingBanner : styles.scrollingBanner} >
                 <motion.div
@@ -73,7 +109,7 @@ const Card = ({ item, index }) => {
                         x: {
                             repeat: Number.POSITIVE_INFINITY,
                             repeatType: "loop",
-                            duration: isHovered ? 120 : 10,
+                            duration: 10,
                             ease: "linear",
                         },
                     }}
@@ -82,25 +118,21 @@ const Card = ({ item, index }) => {
                         <div key={`scrolling-${i}-${i}`} className={styles.footer_content}>
                             <span className={styles.followSpam}>
                                 {item.text_first}
-                                <Asterisk className={
-                                    isHovered ? (
-                                        index === 0 ? styles.first_followSymbol :
-                                            index === 1 ? styles.second_followSymbol :
-                                                index === 2 ? styles.third_followSymbol :
-                                                    styles.first_followSymbol
-                                    ) : styles.followSymbol
-                                } />
+                                {
+                                    isHovered && index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
+                                        : isHovered && index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
+                                            : isHovered && index === 2 ? <Image src={RedStar} alt="star" className={styles.followSymbol} />
+                                                : <Image src={Star} alt="star" className={styles.followSymbol} />
+                                }
                             </span>
                             <span className={styles.followSpam}>
                                 {item.text_sec}
-                                <Asterisk className={
-                                    isHovered ? (
-                                        index === 0 ? styles.first_followSymbol :
-                                            index === 1 ? styles.second_followSymbol :
-                                                index === 2 ? styles.third_followSymbol :
-                                                    styles.first_followSymbol
-                                    ) : styles.followSymbol
-                                } />
+                                {
+                                    isHovered && index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
+                                        : isHovered && index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
+                                            : isHovered && index === 2 ? <Image src={RedStar} alt="star" className={styles.followSymbol} />
+                                                : <Image src={Star} alt="star" className={styles.followSymbol} />
+                                }
                             </span>
                         </div>
                     ))}
@@ -119,9 +151,41 @@ const Card = ({ item, index }) => {
                 </motion.div>
             </div>
 
-            {/* Expandable Grid */}
+
+            {/* Hover Modal Overlay - now follows pointer */}
             <AnimatePresence>
                 {isHovered && (
+                    <motion.div
+                        className={styles.hoverModalOverlay}
+                        initial={{ scaleY: 0 }}
+                        animate={{ scaleY: 1, transition: { delay: 0.2 } }}
+                        exit={{ scaleY: 0 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        style={{
+                            position: "fixed",
+                            left: smoothMouse.x,
+                            top: smoothMouse.y,
+                            transform: 'translate(-50%, -50px)',
+                        }}
+                    >
+                        <div className={styles.modalContent}>
+                            <Image
+                                src={item.modalPreviewImage || "/placeholder.svg"}
+                                alt={`${item.modalProjectTitle} preview`}
+                                width={250}
+                                height={150}
+                                className={styles.modalPreviewImage}
+                            />
+                            <h1> {index} </h1>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+
+            {/* Expandable Grid */}
+            <AnimatePresence>
+                {isOpen && (
                     <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
@@ -139,6 +203,6 @@ const Card = ({ item, index }) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     )
 }

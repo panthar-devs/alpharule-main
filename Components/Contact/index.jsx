@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { useContext, useEffect, useRef, useState } from "react"
+import Dots from "../../assets/image/Footer/dots.svg"
+import DotsWhite from "../../assets/image/Footer/dots_white.svg"
 import Mesh from "../../assets/image/Difference/bg.svg"
 import style from "./index.module.css"
 
@@ -73,6 +75,9 @@ const Our_Service = () => {
       </AnimatePresence>
       <div className={style.bg_section}>
         <Image src={Mesh || "/placeholder.svg"} alt="background" className={style.image} />
+      </div>
+      <div className={style.dot_bg_section} style={{ zIndex: visible ? 4 : 2 }} >
+        {visible ? <Image src={DotsWhite || "/placeholder.svg"} alt="dots_background" className={style.image} /> : <Image src={Dots || "/placeholder.svg"} alt="dots_background" className={style.image} />}
       </div>
 
       <div className={style.flex_div}>

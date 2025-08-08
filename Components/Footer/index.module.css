@@ -90,6 +90,8 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: -2px 50px 30px 10px rgb(0 0 0 / 62%);
+  z-index: 5;
 }
 
 
@@ -203,5 +205,5 @@
   .followSpam {
     font-size: 4.25rem;
   }
-  
+
 }

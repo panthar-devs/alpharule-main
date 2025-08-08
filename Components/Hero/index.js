@@ -45,7 +45,6 @@ const Hero = () => {
   };
 
   const getCursorContext = useContext(CursorContext);
-  const [isHovered, setIsHovered] = useState(false);
 
   const [hoverImage, setHoverImage] = useState("design");
   console.log(hoverImage)

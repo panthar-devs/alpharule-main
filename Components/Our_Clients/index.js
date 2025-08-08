@@ -6,6 +6,7 @@ import { DotButton, useDotButton } from "./DotButton";
 import { usePrevNextButtons, NextButton, PrevButton } from "./ArrowButton";
 import { reviews } from "@/utilites/data";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 
 const TWEEN_FACTOR_BASE = 0.84
 
@@ -21,7 +22,9 @@ const Our_Clients = (props) => {
   const slides = Array.from(Array(10).keys())
 
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ playOnInit: true, delay: 1500 })
+  ])
   const tweenFactor = useRef(0)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -105,7 +108,7 @@ const Our_Clients = (props) => {
             <div className="embla__container">
               {reviews.map((review, index) => (
 
-                <div className="embla__slide_cover" >
+                <div className="embla__slide_cover" key={index} >
                   <div className="embla_star" >
                     {Array.from({ length: review.rating }).map(() => '⭐')}
                   </div>

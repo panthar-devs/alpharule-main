@@ -2,6 +2,12 @@
 
 @font-face {
   font-family: "Matter";
+  src: url("../assets/fronts/matter/Matter-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Matter";
   src: url("../assets/fronts/matter/Matter-Regular.ttf");
   font-weight: normal;
   font-style: normal;
@@ -10,7 +16,13 @@
 @font-face {
   font-family: "Matter";
   src: url("../assets/fronts/matter/Matter-Medium.ttf");
-  font-weight: medium;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fronts/matter/Matter-SemiBold.ttf");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -40,7 +52,7 @@ html {
 }
 
 body {
-  font-family: "Matter", sans-serif;
+  font-family: "Matter", sans-serif !important;
   scroll-behavior: smooth;
   max-width: 100vw !important;
   overflow-x: hidden !important;

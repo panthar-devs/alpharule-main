@@ -116,7 +116,7 @@ Hero Animation Part Start
   max-width: 96px;
   height: auto;
   right: 0;
-  top: 300px;
+  top: 320px;
 }
 
 .hero_design_image img:nth-child(3) {
@@ -137,7 +137,7 @@ Hero Animation Part Start
 .hero_technology_image img:nth-child(1) {
   max-width: 136px;
   height: auto;
-  top: 373px;
+  top: 390px;
   right: 38px;
 }
 
@@ -145,7 +145,7 @@ Hero Animation Part Start
   max-width: 86px;
   height: auto;
   top: 0;
-  left: 310px;
+  left: 330px;
 }
 
 .hero_technology_image img:nth-child(3) {
@@ -168,7 +168,7 @@ Hero Animation Part Start
   max-width: 136px;
   height: auto;
   right: -25px;
-  top: 151px;
+  top: 160px;
 }
 
 .hero_business_image img:nth-child(2) {

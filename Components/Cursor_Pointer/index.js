@@ -3,29 +3,46 @@ import { useEffect } from "react";
 import { useState } from "react";
 import style from "./index.module.css";
 import { CursorContext } from "@/context/CursorContext";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+
 
 const Cursor_Pointer = () => {
   const context = useContext(CursorContext);
-  const [mousePosition, setMousePosition] = useState({ x: -3, y: -3 });
-  // const [cursorSize, setCursorSize] = useState(80);
+  const mouse = {
+    x: useMotionValue(0),
+    y: useMotionValue(0)
+  }
+
+  const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 }
+
+  const smoothMouse = {
+    x: useSpring(mouse.x, smoothOptions),
+    y: useSpring(mouse.y, smoothOptions)
+  }
+
+  const manageMouseMove = e => {
+    const { clientX, clientY } = e;
+    mouse.x.set(clientX - context.cursorStyle.width / 2);
+    mouse.y.set(clientY - context.cursorStyle.height / 2);
+  }
 
   useEffect(() => {
-    document.addEventListener("mousemove", (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    });
-    //   document.addEventListener("mouseenter", () => {
-    //     setCursorSize(80);
-    //   });
-    //   document.addEventListener("mouseleave", () => {
-    //     setCursorSize(80);
-    //   });
-  }, []);
+    window.addEventListener("mousemove", manageMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", manageMouseMove)
+    }
+  }, [])
+
+
 
   return (
-    <div
+    <motion.div
+
+      // animate={{ x: mousePosition.x, y: mousePosition.y }}
+      // transition={{ type: "spring" }}
       style={{
-        left: mousePosition.x,
-        top: mousePosition.y,
+        left: smoothMouse.x,
+        top: smoothMouse.y,
         width: context.cursorStyle.width,
         height: context.cursorStyle.height,
         backgroundColor: context.cursorStyle.color,

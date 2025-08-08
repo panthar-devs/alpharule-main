@@ -6,12 +6,18 @@
     align-items: center;
     position: relative;
     width: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 85%, rgb(0, 0, 0, 0.2) 15%);
 }
 
 .bg_section {
     position: absolute;
     inset: 0;
     z-index: 1;
+}
+
+.dot_bg_section {
+    position: absolute;
+    inset: 0;
 }
 
 .footer_orange {
@@ -143,12 +149,14 @@
     transition: all ease-in-out 0.3s;
     margin: 20px 0;
     transition: 0.15s linear;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     line-height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .btn_icon {
@@ -177,6 +185,9 @@
 
 .hero_btn:hover {
     color: black;
+    box-shadow: 0px 1px 50px 7px rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /* box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px; */
 }
 
 

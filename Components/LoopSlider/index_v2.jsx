@@ -16,8 +16,8 @@ const Difference = () => {
         offset: ["start end", "end center"]
     })
 
-    const fastY = useTransform(scrollYProgress, [0, 1], ["20px", "-70px"])
-    const smallY = useTransform(scrollYProgress, [0, 1], ["20px", "-75px"])
+    const fastY = useTransform(scrollYProgress, [0, 1], ["-20px", "170px"])
+    const smallY = useTransform(scrollYProgress, [0, 1], ["-10px", "80px"])
 
     return (
         <div className={innovate_section} >
@@ -48,8 +48,7 @@ const Difference = () => {
 
             <div className={secondDiv} >
                 <LoopSlider />
-                <div className={tempDiv}></div>
-
+                <div className={tempDiv} ></div>
                 <div className={phoneContainer} >
                     <Image className={image} alt="phone" src={Phone} />
                 </div>

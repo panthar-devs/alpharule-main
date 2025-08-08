@@ -80,4 +80,4 @@ export const mainTexts = [
     },
 ]
 
-export const paragraph = "Our team of experienced developers and designers will work with you todesign, develop, market and deliver software that meets your uniqueneeds and goals."
+export const paragraph = "Our team of experienced developers and designers will work with you to design, develop, market and deliver software that meets your unique needs and goals."
