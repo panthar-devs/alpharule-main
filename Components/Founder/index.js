@@ -31,8 +31,7 @@ const Founder = () => {
             <h3 className={style.header_text}>Founder</h3>
           </div>
           <p className={style.header_details}>
-            <span className="fw-bold">Sahgal Yadav,</span> Founder, of AlphaRule Creatives and Less
-            Pay.
+            <span className="fw-bold">Sahgal Yadav,</span> Founder, of AlphaRule Creatives
           </p>
         </div>
         <div className={style.middlepart}>

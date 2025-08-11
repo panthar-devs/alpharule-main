@@ -95,6 +95,24 @@
   z-index: 10;
 }
 
+.phone_video {
+  position: absolute;
+  top: 11%;
+  left: 11%;
+  width: 48%;
+  z-index: 12;
+  height: 69%;
+}
+
+.phone_frame {
+  position: absolute;
+  z-index: 15;
+  width: 49%;
+  height: 70%;
+  top: 10.5%;
+  left: 11%;
+}
+
 @media only screen and (max-width: 830px) {
   .word_div {
     padding: 5rem 2rem;

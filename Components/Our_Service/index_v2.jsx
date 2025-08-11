@@ -87,8 +87,12 @@ const Card = ({ item, index, isOpen, onToggle }) => {
     const manageMouseMove = e => {
         const { clientX, clientY } = e;
         mouse.x.set(clientX)
-        mouse.y.set(clientY - 150);
+        mouse.y.set(clientY - 120);
     }
+
+    const firstVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896473/Showreel_-Web-gallery-_remix_sjkbuc.mp4"
+    const secondVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896470/Showreel-Grid-Mobile-003-_remix_e1bmjm.mp4"
+    const thirdVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896473/Showreel-Grid-Mobile-_remix_oc8pen.mp4"
 
 
     return (
@@ -103,8 +107,8 @@ const Card = ({ item, index, isOpen, onToggle }) => {
 
             <div className={isHovered ? styles.hover_scrollingBanner : styles.scrollingBanner} >
                 <motion.div
-                    className={styles.scrollingTextInner}
-                    animate={{ x: "-50%" }}
+                    className={(index % 2) === 0 ? styles.scrollingTextInner : styles.opposite_scrollingText}
+                    animate={{ x: (index % 2) === 0 ? "-50%" : "90%" }}
                     transition={{
                         x: {
                             repeat: Number.POSITIVE_INFINITY,
@@ -119,19 +123,17 @@ const Card = ({ item, index, isOpen, onToggle }) => {
                             <span className={styles.followSpam}>
                                 {item.text_first}
                                 {
-                                    isHovered && index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
-                                        : isHovered && index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
-                                            : isHovered && index === 2 ? <Image src={RedStar} alt="star" className={styles.followSymbol} />
-                                                : <Image src={Star} alt="star" className={styles.followSymbol} />
+                                    index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
+                                        : index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
+                                            : <Image src={RedStar} alt="star" className={styles.followSymbol} />
                                 }
                             </span>
                             <span className={styles.followSpam}>
                                 {item.text_sec}
                                 {
-                                    isHovered && index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
-                                        : isHovered && index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
-                                            : isHovered && index === 2 ? <Image src={RedStar} alt="star" className={styles.followSymbol} />
-                                                : <Image src={Star} alt="star" className={styles.followSymbol} />
+                                    index === 0 ? <Image src={GreenStar} alt="star" className={styles.followSymbol} />
+                                        : index === 1 ? <Image src={BlueStar} alt="star" className={styles.followSymbol} />
+                                            : <Image src={RedStar} alt="star" className={styles.followSymbol} />
                                 }
                             </span>
                         </div>
@@ -169,14 +171,9 @@ const Card = ({ item, index, isOpen, onToggle }) => {
                         }}
                     >
                         <div className={styles.modalContent}>
-                            <Image
-                                src={item.modalPreviewImage || "/placeholder.svg"}
-                                alt={`${item.modalProjectTitle} preview`}
-                                width={250}
-                                height={150}
-                                className={styles.modalPreviewImage}
-                            />
-                            <h1> {index} </h1>
+                            <video autoPlay muted loop style={{ borderRadius: "16px" }} >
+                                <source src={index === 0 ? firstVideoUrl : index === 1 ? secondVideoUrl : thirdVideoUrl} type="video/mp4" />
+                            </video>
                         </div>
                     </motion.div>
                 )}

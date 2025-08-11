@@ -162,8 +162,8 @@ const Navbar = () => {
                             style={{
                               marginLeft: "5px",
                               position: "absolute",
-                              top: isOpen ? "2px" : "10px",
-                              right: isOpen ? "-22px" : "-12px"
+                              top: isOpen ? "-1px" : "5px",
+                              right: isOpen ? "-22px" : "-15px"
                             }}
                             src={isOpen ? nav_down_arrow : nav_dot}
                             height={isOpen ? 20 : 7}

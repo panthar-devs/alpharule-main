@@ -119,7 +119,7 @@ const Our_Service = () => {
 
       <div className={style.last_div}>
         <div>
-          <span>&copy; 2024 ALPHARULE | All rights reserved</span>
+          <span>&copy; 2025 ALPHARULE | All rights reserved</span>
         </div>
         <div>
           <span>TnC</span>

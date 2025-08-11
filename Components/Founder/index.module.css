@@ -57,10 +57,10 @@
 }
 
 .founder_img_part {
-  background-image: url("../../assets/image/Founder/background_star.png");
+  /* background-image: url("../../assets/image/Founder/background_star.png");
   background-repeat: no-repeat;
   background-position: top;
-  background-attachment: scroll;
+  background-attachment: scroll; */
 }
 
 .founder_img_part img {

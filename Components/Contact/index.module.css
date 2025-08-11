@@ -12,7 +12,7 @@
 .bg_section {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 .dot_bg_section {
@@ -100,7 +100,7 @@
 
 .contact_text {
     text-align: center;
-    color: var(--gray-dark);
+    color: var(--gray-light);
 }
 
 .service_text {

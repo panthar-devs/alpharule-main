@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+/assets/tempVideos
+/assets/videos
+
 # next.js
 /.next/
 /out/

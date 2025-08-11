@@ -123,6 +123,7 @@
   font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
+  position: relative;
 }
 
 .hover_scrollingBanner {
@@ -134,6 +135,7 @@
   padding: 2rem 0;
   font-size: 3rem;
   font-weight: 700;
+  position: relative;
   text-transform: uppercase;
 }
 
@@ -141,6 +143,14 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
+}
+
+.opposite_scrollingText {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  left: -100%;
 }
 
 .gridContainer {
@@ -178,7 +188,7 @@
 
 .hoverModalOverlay {
   position: absolute;
-  width: 500px;
+  width: 400px;
   aspect-ratio: 16/9;
   /* height: 250px; */
   background-color: #333;
@@ -188,7 +198,7 @@
   align-items: center;
   justify-content: flex-start;
   z-index: 10;
-  padding: 1rem;
+  padding: 0.25rem;
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
