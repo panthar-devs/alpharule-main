@@ -210,7 +210,7 @@
   color: var(--dark);
   border: 1px solid #383838;
   padding: 12px 28px;
-  width: 145px;
+  width: fit-content;
   transition: 0.15s linear;
   overflow: hidden;
 
@@ -232,8 +232,8 @@
 }
 
 .nav_btn_started:hover::before {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
 }
 .nav_btn_started:hover {
   color: white;
