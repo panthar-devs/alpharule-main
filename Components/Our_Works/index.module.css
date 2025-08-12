@@ -44,4 +44,11 @@
     line-height: 32px;
     margin-left: 20px;
   }
+
+  .mainpart{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 }

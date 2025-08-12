@@ -118,7 +118,6 @@ const Our_Clients = (props) => {
                       <span> " {review.review} " </span>
                     </div>
                     <div className={style.flex_div} >
-                      <Image src={review.pic} alt="user" className={style.reviewProfile} />
                       <span> {review.author} </span>
                     </div>
 

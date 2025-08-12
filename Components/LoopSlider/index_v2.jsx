@@ -4,7 +4,7 @@ import Phone from "../../assets/image/Difference/phone.svg";
 import Frame from "../../assets/image/Difference/frame.svg";
 import Video from "../../assets/image/Difference/video.svg";
 import Mesh from "../../assets/image/Difference/bg.svg";
-import { bg_section, smart_div, image, innovate_section, word_div, word_content, wrapper, tempDiv, secondDiv, phoneContainer, wrapper_firstDiv, phone_video, phone_frame } from "./index.module.css";
+import { bg_section, smart_div, image, innovate_section, word_div, word_content, video_image, wrapper, tempDiv, secondDiv, phoneContainer, wrapper_firstDiv, phone_video, phone_frame } from "./index.module.css";
 import LoopSlider from ".";
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
@@ -68,7 +68,10 @@ const Difference = () => {
 
                         {/* Video layer - positioned to cover phone screen area */}
                         <div className={phone_video}>
-                            <Image src={Video} alt="Video content" className={image} />
+                            <video autoPlay muted loop className={video_image}>
+                                <source src="https://res.cloudinary.com/dq6ubifli/video/upload/v1754983884/loop_pfj5bn.mp4" type="video/mp4" />
+                            </video>
+                            {/* <Image src={Video} alt="Video content" className={image} /> */}
                         </div>
 
                         {/* Frame layer - creates phone frame illusion on top */}

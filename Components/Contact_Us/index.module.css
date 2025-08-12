@@ -1,5 +1,7 @@
 .mainpart {
   margin-top: 150px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .headertext {
@@ -265,11 +267,12 @@
 
 @media only screen and (max-width: 768px) {
   .mainpart {
-    margin: 100px 18px 0 18px;
+    margin: 100px 0px 0 0px;
   }
 
-  .designtext_container {
-    display: inline-block;
+  .boxtext_design {
+    font-size: 10px;
+    padding: 15px 10px;
   }
 
   .hand_design {
@@ -288,6 +291,9 @@
   }
 
   .budget_input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     grid-column: 1/3;
   }
 
