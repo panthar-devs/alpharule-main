@@ -184,7 +184,7 @@
 }
 
 .hero_btn:hover {
-    color: black;
+    color: black !important;
     box-shadow: 0px 1px 50px 7px rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.6);
     /* box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px; */

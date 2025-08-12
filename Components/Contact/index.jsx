@@ -10,6 +10,7 @@ import Dots from "../../assets/image/Footer/dots.svg"
 import DotsWhite from "../../assets/image/Footer/dots_white.svg"
 import Mesh from "../../assets/image/Difference/bg.svg"
 import style from "./index.module.css"
+import Link from "next/link"
 
 
 
@@ -103,10 +104,10 @@ const Our_Service = () => {
         </div>
 
         <div className={style.flex_get_div} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)} >
-          <div ref={buttonRef} className={style.hero_btn}>
+          <Link href="/contact" ref={buttonRef} className={style.hero_btn}>
             <span>Let's Connect</span>
             <ArrowRight className={style.icon} />
-          </div>
+          </Link>
         </div>
 
         <div>

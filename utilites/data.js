@@ -2,33 +2,27 @@ import ReviewPage from "../assets/image/Review/review1.png"
 export const reviews = [
     {
         rating: 5,
-        author: "Sarah L., Founder, Bloom & Co.",
+        author: "Rohan Kapoor, Founder, FinPilot Technologies",
         pic: ReviewPage,
-        review: "Working with ALPHARULE was a transformative experience. They took the time to understand our goals, and their expertise in design and development shone through at every step. We saw our brand vision come to life in a way that exceeded our expectations. The team is not only skilled but truly invested in client success. I can’t recommend them enough!"
+        review: "AlphaRule didn’t just build us a website—they built our brand’s first impression. From concept to launch, the team understood our audience better than we did and delivered a design that increased our sign-up rate by 43% in the first month. They move fast, communicate clearly, and treat your project like it’s their own business!"
     },
     {
         rating: 5,
-        author: "Sarah L., Founder, Bloom & Co.",
+        author: "Vikram Menon, Head of Marketing, Nexora Industries",
         pic: ReviewPage,
-        review: "Working with ALPHARULE was a transformative experience. They took the time to understand our goals, and their expertise in design and development shone through at every step. We saw our brand vision come to life in a way that exceeded our expectations. The team is not only skilled but truly invested in client success. I can’t recommend them enough!"
+        review: "AlphaRule is our go-to partner for product launches. Their ability to turn vague ideas into visually stunning, conversion-focused campaigns is unmatched. In our last collaboration, they helped us close a B2B deal worth ₹2.4 crore just by elevating our pitch deck and digital presence"
     },
     {
         rating: 5,
-        author: "Sarah L., Founder, Bloom & Co.",
+        author: "Meera Iyer, Director, The Green Step Foundation",
         pic: ReviewPage,
-        review: "Working with ALPHARULE was a transformative experience. They took the time to understand our goals, and their expertise in design and development shone through at every step. We saw our brand vision come to life in a way that exceeded our expectations. The team is not only skilled but truly invested in client success. I can’t recommend them enough!"
+        review: "What stood out with AlphaRule was their genuine care. They didn’t just design a platform for our social initiative—they helped us tell our story in a way that moved people to action. Donations increased by 60% within the first quarter of launch."
     },
     {
         rating: 5,
-        author: "Sarah L., Founder, Bloom & Co.",
+        author: "Rahul Bhatia, General Manager, The Indigo Palm Resort",
         pic: ReviewPage,
-        review: "Working with ALPHARULE was a transformative experience. They took the time to understand our goals, and their expertise in design and development shone through at every step. We saw our brand vision come to life in a way that exceeded our expectations. The team is not only skilled but truly invested in client success. I can’t recommend them enough!"
-    },
-    {
-        rating: 5,
-        author: "Sarah L., Founder, Bloom & Co.",
-        pic: ReviewPage,
-        review: "Working with ALPHARULE was a transformative experience. They took the time to understand our goals, and their expertise in design and development shone through at every step. We saw our brand vision come to life in a way that exceeded our expectations. The team is not only skilled but truly invested in client success. I can’t recommend them enough!"
+        review: "AlphaRule transformed our online booking experience. The new website feels luxurious yet effortless, matching our brand perfectly. Within three months, direct bookings went up by 27%, saving us thousands in aggregator commissions."
     },
 ]
 

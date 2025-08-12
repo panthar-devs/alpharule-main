@@ -9,12 +9,12 @@ import Connect from "../Contact"
 
 export default function SocialLinks() {
   const socialLinks = [
-    { name: "Instagram", href: "#" },
-    { name: "LinkedIn", href: "#" },
-    { name: "Dribbble", href: "#" },
-    { name: "YouTube", href: "#" },
-    { name: "Behance", href: "#" },
-    { name: "Twitter", href: "#" },
+    { name: "Instagram", href: "/contact" },
+    { name: "LinkedIn", href: "/contact" },
+    { name: "Dribbble", href: "/contact" },
+    { name: "YouTube", href: "/contact" },
+    { name: "Behance", href: "/contact" },
+    { name: "Twitter", href: "/contact" },
   ]
   return (
     <footer>

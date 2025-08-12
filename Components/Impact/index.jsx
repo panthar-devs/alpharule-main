@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Image1 from "../../assets/image/Impact/image1.png";
+import Image2 from "../../assets/image/Impact/image2.png";
+import Image3 from "../../assets/image/Impact/image3.png";
 import style from "./index.module.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { CursorContext } from "@/context/CursorContext";
@@ -119,14 +121,14 @@ const Impact = () => {
                         {isMobile ? (
                             <div className={style.img_div}>
                                 <Image src={Image1} alt="image" />
-                                <Image src={Image1} alt="image" />
-                                <Image src={Image1} alt="image" />
+                                <Image src={Image2} alt="image" />
+                                <Image src={Image3} alt="image" />
                             </div>)
                             :
                             (<motion.div style={{ y: imageWrapperY }} className={style.img_div} >
                                 <Image src={Image1} alt="image" />
-                                <Image src={Image1} alt="image" />
-                                <Image src={Image1} alt="image" />
+                                <Image src={Image2} alt="image" />
+                                <Image src={Image3} alt="image" />
                             </motion.div>)}
                     </div>
 

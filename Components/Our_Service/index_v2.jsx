@@ -12,7 +12,6 @@ import BigGreenStar from "../../assets/image/landingPage/big_green_star.svg"
 import BlueStar from "../../assets/image/Service/blue_star.svg"
 import GreenStar from "../../assets/image/Service/green_star.svg"
 import RedStar from "../../assets/image/Service/red_star.svg"
-import Star from "../../assets/image/Service/star.svg"
 import styles from "./index.module.css"
 
 export default function ServiceSection() {
@@ -52,9 +51,11 @@ export default function ServiceSection() {
                 </div>
             </div>
 
-            {mainTexts.map((item, i) => (
-                <Card item={item} index={i} isOpen={openIndex === i} onToggle={handleToggle} />
-            ))}
+            <div>
+                {mainTexts.map((item, i) => (
+                    <Card item={item} index={i} isOpen={openIndex === i} onToggle={handleToggle} />
+                ))}
+            </div>
 
             <div className={styles.service_v2_last_container} >
                 <span> We aim to keep you at updated at all times of the design process. Here is a tentative step-by-step process for our design work. </span>
@@ -92,7 +93,7 @@ const Card = ({ item, index, isOpen, onToggle }) => {
 
     const firstVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896473/Showreel_-Web-gallery-_remix_sjkbuc.mp4"
     const secondVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896470/Showreel-Grid-Mobile-003-_remix_e1bmjm.mp4"
-    const thirdVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754896473/Showreel-Grid-Mobile-_remix_oc8pen.mp4"
+    const thirdVideoUrl = "https://res.cloudinary.com/dq6ubifli/video/upload/v1754977888/video_vatg9j.mp4"
 
 
     return (

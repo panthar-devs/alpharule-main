@@ -19,9 +19,9 @@ const Difference = () => {
     })
 
     const fastY = useTransform(scrollYProgress, [0, 1], ["-20px", "360px"])
-    const mobileFastY = useTransform(scrollYProgress, [0, 1], ["-20px", "200px"])
+    const mobileFastY = useTransform(scrollYProgress, [0, 1], ["-80px", "90px"])
     const smallY = useTransform(scrollYProgress, [0, 1], ["-10px", "270px"])
-    const mobileSmallY = useTransform(scrollYProgress, [0, 1], ["-10px", "200px"])
+    const mobileSmallY = useTransform(scrollYProgress, [0, 1], ["-30px", "120px"])
 
     useEffect(() => {
         if (window.innerWidth <= 768) {

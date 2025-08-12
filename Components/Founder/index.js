@@ -18,7 +18,7 @@ const Founder = () => {
   return (
     <div className="container">
       <section className={style.founderPart}>
-        <div className={style.textpart}>
+        <div className={style.flex_center}>
           <div
             onMouseEnter={() => {
               changeCursor("size_defference");
@@ -27,14 +27,14 @@ const Founder = () => {
               changeCursor();
             }}
           >
-            <h3 className={style.header_text}>Meet the</h3>
+            <h3 className={style.header_text_black}>Meet the</h3>
             <h3 className={style.header_text}>Founder</h3>
           </div>
           <p className={style.header_details}>
             <span className="fw-bold">Sahgal Yadav,</span> Founder, of AlphaRule Creatives
           </p>
         </div>
-        <div className={style.middlepart}>
+        <div className={style.flex_center}>
           <p className={style.middletext}>
             "Wonder what your customer really wants? Think like a customer. First Experience the
             problem then find it's solution and make lives easier."
