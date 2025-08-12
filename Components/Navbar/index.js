@@ -183,7 +183,7 @@ const Navbar = () => {
                           className={nav_btn_started}
                           style={{ left: navbuttonPosition.x, top: navbuttonPosition.y }}
                         >
-                          <span>Get Started</span>
+                          <span>Connect With Us</span>
                         </div>
                       </Link>
                     </li>
